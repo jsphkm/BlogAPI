@@ -10,17 +10,17 @@ BlogPosts.create(
   'Catcher in the Rye',
   'A story about a boy using literay realism',
   'J.D. Salinger'
-)
+);
 
 BlogPosts.create(
   'Stuart Little',
   'A story about a mouse using literay realism',
   'E.B. White'
-)
+);
 
 router.get("/", (req, res) => {
   res.json(BlogPosts.get());
-})
+});
 
 router.post("/", (req, res) => {
   const requiredFields = ["title", "content", "author"];
